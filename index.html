@@ -1,67 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard Jam</title>
 </head>
 
 <body>
 
+    <h2 id="jam">00:00:00</h2>
+    <p id="tanggal"></p>
+
+    <table class="table-rekap">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Faqih</td>
+        </tr>
+    </table>
+
     <script>
-        //  jam dashboard
-        function updateJam() {
-            let sekarang = new Date();
+        document.addEventListener("DOMContentLoaded", function () {
 
-            let jam = sekarang.getHours().toString().padStart(2, '0');
-            let menit = sekarang.getMinutes().toString().padStart(2, '0');
-            let detik = sekarang.getSeconds().toString().padStart(2, '0');
+            function updateWaktu() {
+                let sekarang = new Date();
 
-            document.getElementById("jam").innerHTML =
-                jam + ":" + menit + ":" + detik;
-        }
+                let jam = sekarang.getHours().toString().padStart(2, '0');
+                let menit = sekarang.getMinutes().toString().padStart(2, '0');
+                let detik = sekarang.getSeconds().toString().padStart(2, '0');
 
-        setInterval(updateJam, 1000);
-        function updateWaktu() {
-            let sekarang = new Date();
+                const jamElement = document.getElementById("jam");
+                const tanggalElement = document.getElementById("tanggal");
 
-            let jam = sekarang.getHours().toString().padStart(2, '0');
-            let menit = sekarang.getMinutes().toString().padStart(2, '0');
-            let detik = sekarang.getSeconds().toString().padStart(2, '0');
+                if (jamElement) {
+                    jamElement.innerHTML = `${jam}:${menit}:${detik}`;
+                }
 
-            document.getElementById("jam").innerHTML =
-                jam + ":" + menit + ":" + detik;
+                if (tanggalElement) {
+                    let opsiTanggal = {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    };
 
-            let opsiTanggal = {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            };
+                    tanggalElement.innerHTML =
+                        sekarang.toLocaleDateString('id-ID', opsiTanggal);
+                }
+            }
 
-            document.getElementById("tanggal").innerHTML =
-                sekarang.toLocaleDateString('id-ID', opsiTanggal);
-        }
+            updateWaktu();
+            setInterval(updateWaktu, 1000);
 
-        updateWaktu();
-        setInterval(updateWaktu, 1000);
+            const rows = document.querySelectorAll(".table-rekap tr");
 
-        const rows = document.querySelectorAll(".table-rekap tr");
+            rows.forEach((row, index) => {
+                row.style.opacity = "0";
 
-        rows.forEach((row, index) => {
-
-            row.style.opacity = "0";
-
-            setTimeout(() => {
-                row.style.transition = "0.5s";
-                row.style.opacity = "1";
-            }, index * 100);
+                setTimeout(() => {
+                    row.style.transition = "0.5s";
+                    row.style.opacity = "1";
+                }, index * 100);
+            });
 
         });
     </script>
 
 </body>
-</html>
 
 </html>
