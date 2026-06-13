@@ -1,140 +1,454 @@
-/* RESPONSIVE ALL DEVICE */
+.navbar {
+    background-color: black;
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-@media screen and (max-width: 1024px) {
+.li-navbar {
+    list-style: none;
+    font-size: 20px;
+}
 
-    .login {
-        right: 50px;
-        width: 300px;
+.font-navbar {
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px 12px;
+}
+
+.navbar :hover {
+    background-color: cyan;
+    color: black;
+    border-radius: 20px;
+    transition: ease 0.5s;
+}
+
+/* lading page */
+.home-body {
+    margin: 0;
+    background-image: url("assets/BG ABSEN2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.content {
+    display: flex-box;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 180px 50px 10px 50px;
+}
+
+.font-home {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    width: 550px;
+    height: 300px;
+    border-radius: 20px;
+    padding-left: 30px;
+    box-shadow: 10px 11px 20px 10px black;
+    background: linear-gradient(270deg, #d400ff, #60000a, #0088ff, #3c00ff);
+    background-size: 600% 600%;
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
     }
 
-    .content {
-        padding: 150px 30px 20px 30px;
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
 
-@media screen and (max-width: 768px) {
+.judul-home {
+    font-size: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-shadow: 1px 5px 10px black;
+    color: white;
+}
 
-    /* Navbar */
-    .navbar {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 15px;
+.p-home {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 1px 5px 10px black;
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.login {
+    position: absolute;
+    right: 160px;
+    top: 200px;
+    width: 350px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px 10px black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+button {
+    background-color: cyan;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.font-login {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+/* register */
+.body-register {
+    margin: 0;
+    background: linear-gradient(270deg, #d400ff, #00fff2, #0088ff, #3c00ff);
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease-in-out;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
     }
 
-    /* Home */
-    .home-body {
-        background-size: cover;
-        background-position: center;
+    50% {
+        background-position: 100% 50%;
     }
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 20px;
+    100% {
+        background-position: 0% 50%;
     }
+}
 
-    .font-home {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-    }
+.register-body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .judul-home {
-        font-size: 35px;
-    }
+.register-page {
+    background-color: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px 20px black;
+}
 
-    .p-home {
-        font-size: 16px;
-    }
+.form-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
 
-    .login {
-        position: static;
-        width: 90%;
-        margin-top: 20px;
-    }
+.input-register {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    /* Dashboard */
-    .content-dashboard {
-        text-align: center;
-    }
+.input-register input {
+    padding: 10px;
+    border-radius: 5px;
+}
 
+.button-register {
+    background-color: cyan;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+.judul-register {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.paragraf-register {
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.font-signup {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(6, 5, 5);
+}
+
+.signup-medsos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 10px;
+}
+
+.logo-regis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.font-logo-regis {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.foto-google {
+    width: 30px;
+    height: 30px;
+}
+
+.logo-regis:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.logo-regis:hover .font-logo-regis {
+    color: white;
+}
+
+/* dashboard */
+/* DASHBOARD */
+.body-dashboard {
+    margin: 0;
+    background: #f4f6f9;
+}
+
+/* Banner */
+.content-dashboard {
+    width: 100%;
+    min-height: 220px;
+    background-image: url("assets/BGdashboard.png");
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.judul-dashboard {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.paragraf-dashboard {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Card Statistik */
+.card-absen {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.card {
+    flex: 1 1 220px;
+    max-width: 250px;
+    min-width: 200px;
+    height: 150px;
+    background: linear-gradient(135deg, #00e5ff, #0066ff);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px cyan;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.card select {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* TABEL */
+.table-absen {
+    margin: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #0066ff;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
     .judul-dashboard {
         font-size: 30px;
-    }
-
-    .paragraf-dashboard {
-        font-size: 16px;
-    }
+    };
 
     .card {
         min-width: 100%;
     }
 
-    .table-absen {
-        overflow-x: auto;
-    }
-
-    table {
-        min-width: 600px;
-    }
-
-    /* Jam */
-    .jam-box {
-        position: static;
-        margin: 20px auto;
-    }
-
-    /* Form Absen */
-    .form-absen {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 85%;
-        max-width: 350px;
-    }
-
-    /* Register */
-    .register-page {
-        width: 90%;
-        padding: 25px;
-    }
-
-    /* Rekap */
-    .container-rekap {
-        overflow-x: auto;
-    }
-
-    .table-rekap {
-        min-width: 700px;
+    .navbar {
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 480px) {
+.jam-box {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
-    .judul-home {
-        font-size: 28px;
-    }
+#jam {
+    font-size: 30px;
+    margin: 0;
+}
 
-    .p-home {
-        font-size: 14px;
-    }
+/* Absen */
+.body-absen {
+    margin: 0;
+}
 
-    .judul-dashboard {
-        font-size: 24px;
-    }
+.content-absen {
+    min-height: 91vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
-    .judul-absen {
-        font-size: 24px;
-    }
+.form-absen {
+    position: absolute;
+    left: 42%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
-    .card p {
-        font-size: 28px;
-    }
+.form-absen select {
+    padding: 10px;
+    border-radius: 10px;
+}
 
-    .login,
-    .register-page,
-    .form-absen {
-        width: 95%;
-    }
+.judul-absen {
+    font-size: 30px;
+}
+
+.status-absen {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Rekap Absen */
+.body-rekap {
+    margin: 0;
+    background: #f4f6f9;
+}
+
+.container-rekap {
+    padding: 20px;
+}
+
+.judul-rekap {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.table-rekap {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-rekap th, .table-rekap td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table-rekap th {
+    background: #0066ff;
+    color: white;
 }
