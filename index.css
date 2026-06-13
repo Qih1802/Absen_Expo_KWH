@@ -1,0 +1,140 @@
+/* RESPONSIVE ALL DEVICE */
+
+@media screen and (max-width: 1024px) {
+
+    .login {
+        right: 50px;
+        width: 300px;
+    }
+
+    .content {
+        padding: 150px 30px 20px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    /* Home */
+    .home-body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .font-home {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .judul-home {
+        font-size: 35px;
+    }
+
+    .p-home {
+        font-size: 16px;
+    }
+
+    .login {
+        position: static;
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    /* Dashboard */
+    .content-dashboard {
+        text-align: center;
+    }
+
+    .judul-dashboard {
+        font-size: 30px;
+    }
+
+    .paragraf-dashboard {
+        font-size: 16px;
+    }
+
+    .card {
+        min-width: 100%;
+    }
+
+    .table-absen {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    /* Jam */
+    .jam-box {
+        position: static;
+        margin: 20px auto;
+    }
+
+    /* Form Absen */
+    .form-absen {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        max-width: 350px;
+    }
+
+    /* Register */
+    .register-page {
+        width: 90%;
+        padding: 25px;
+    }
+
+    /* Rekap */
+    .container-rekap {
+        overflow-x: auto;
+    }
+
+    .table-rekap {
+        min-width: 700px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .judul-home {
+        font-size: 28px;
+    }
+
+    .p-home {
+        font-size: 14px;
+    }
+
+    .judul-dashboard {
+        font-size: 24px;
+    }
+
+    .judul-absen {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 28px;
+    }
+
+    .login,
+    .register-page,
+    .form-absen {
+        width: 95%;
+    }
+}

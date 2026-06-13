@@ -1,0 +1,49 @@
+// jam dashboard
+function updateJam(){
+    let sekarang = new Date();
+
+    let jam = sekarang.getHours().toString().padStart(2,'0');
+    let menit = sekarang.getMinutes().toString().padStart(2,'0');
+    let detik = sekarang.getSeconds().toString().padStart(2,'0');
+
+    document.getElementById("jam").innerHTML =
+        jam + ":" + menit + ":" + detik;
+}
+
+setInterval(updateJam,1000);
+function updateWaktu() {
+    let sekarang = new Date();
+
+    let jam = sekarang.getHours().toString().padStart(2, '0');
+    let menit = sekarang.getMinutes().toString().padStart(2, '0');
+    let detik = sekarang.getSeconds().toString().padStart(2, '0');
+
+    document.getElementById("jam").innerHTML =
+        jam + ":" + menit + ":" + detik;
+
+    let opsiTanggal = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+
+    document.getElementById("tanggal").innerHTML =
+        sekarang.toLocaleDateString('id-ID', opsiTanggal);
+}
+
+updateWaktu();
+setInterval(updateWaktu, 1000);
+
+const rows = document.querySelectorAll(".table-rekap tr");
+
+rows.forEach((row,index)=>{
+
+    row.style.opacity = "0";
+
+    setTimeout(()=>{
+        row.style.transition = "0.5s";
+        row.style.opacity = "1";
+    },index * 100);
+
+});
